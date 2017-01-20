@@ -36,4 +36,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+    public function showLoginForm()
+    {
+        return view('Themes.'. env("THEME_CURRENT", "Primary") .'.Back.Interface.Auth.Login');
+    }
+
 }
