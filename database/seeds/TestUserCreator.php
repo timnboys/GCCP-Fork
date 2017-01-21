@@ -11,6 +11,12 @@ class TestUserCreator extends Seeder
      */
     public function run()
     {
-        //
+
+        $test = new \App\User();
+        $test->name = "Test User";
+        $test->email = "test@test.com";
+        $test->password = \Illuminate\Support\Facades\Hash::make('password');
+        $test->save();
+
     }
 }
